@@ -15,12 +15,6 @@ limitations under the License.
 */
 
 :root {
-   /* Modify these to change your theme colors: */
-   --primary: #09F;
-   --text: #DDD;
-   --background: #111;
-   --background-elevated: #222;
-
    /* These should be less important: */
    --background-hover: rgba(255, 255, 255, 0.1);
    --background-light: #AAA;
@@ -64,7 +58,7 @@ div.client_channels_list_container {
 }
 
 nav.p-channel_sidebar {
-   background-color: var(--background-elevated);
+   background-color: #222;
    color: var(--text);
 }
 
@@ -203,6 +197,10 @@ li.active[class] span,
 .p-channel_sidebar div.c-custom_scrollbar__thumb_vertical, .p-channel_sidebar div.c-scrollbar__bar {
   background: var(--background-elevated);
   border: 1px solid var(--scrollbar-border);
+}
+
+.c-scrollbar:hover .c-scrollbar__bar, .c-scrollbar__bar:active {
+	background-color: #ccc !important;
 }
 
 #channels_scroller.show_which_channel_is_active[class] li.active .presence.active i.presence_icon,
@@ -981,3 +979,164 @@ ts-jumper, ts-jumper.active {
 ts-jumper ts-jumper-container {
   box-shadow: 0 5px 20px rgba(0,0,0,1);
 }
+
+/* CUSTOM CSS - BUG FIXES */
+
+div.c-message.c-message--light.c-message--hover,
+  .p-flexpane_header,
+  .p-shortcuts_flexpane__title,
+  .p-history_container,
+  .c-message_list__day_divider,
+  .c-message_list__day_divider__label,
+  .c-message_list__day_divider__label__pill,
+  .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
+  .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before,
+  .c-keyboard_key,
+  .c-search_autocomplete,
+  .c-search__input_box .c-search__input_box__input .ql-editor,
+  .c-search__input_box .c-search__input_box__input .ql-placeholder,
+  .c-fullscreen_modal__header,
+  .c-fullscreen_modal__body,
+  .p-threads_footer__input .p-message_input_field {
+    color: #fff !important;
+    background-color: #222 !important;
+  }
+
+  .unread_group_header,
+  .c-message,
+  .c-virtual_list__item,
+  .c-member_slug--link,
+  .inline_message_input_container,
+	.tab_complete_ui_scroller,
+	.c-search_autocomplete footer,
+  .p-threads_footer__input--legacy .p-message_input_plus,
+  .p-emoji_picker__list_container,
+  .p-emoji_picker__footer,
+  .p-emoji_picker__input_container,
+  .p-emoji_picker__sticky_header,
+  .p-emoji_picker__heading {
+    background-color: #222 !important;
+  }
+
+  button.c-button-unstyled.channel_option_item:hover{
+  	background: #333333;
+  }
+
+  .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar){
+      background:#222;
+  }
+
+  .p-message_pane .p-message_pane__top_banners:not(:empty)+div .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,.p-message_pane .p-message_pane__top_banners:not(:empty)+div .c-message_list:not(.c-virtual_list--scrollbar):before{
+      box-shadow:0 32px #222;
+  }
+
+  span.c-message__body,
+  a.c-message__sender_link,
+  span.c-message_attachment__media_trigger.c-message_attachment__media_trigger--caption,
+  div.p-message_pane__foreword__description span,
+  .c-message_attachment,
+  .p-shortcuts_flexpane__shortcut_title {
+    color: #afafaf !important;
+  }
+
+  pre.special_formatting {
+    background-color: #222 !important;
+    color: #8f8f8f !important;
+    border: solid;
+    border-width: 1 px !important;
+  }
+
+  .c-menu {
+    background-color: #fff !important;
+  }
+
+  #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
+  	background-color: #222 !important;
+  	border: 1px solid #222 !important;
+  	box-shadow: none !important;
+  }
+
+  .ql-placeholder, 
+  .c-team__display-name, 
+  .c-unified_member__display-name, 
+  .c-usergroup__handle, 
+  .timezone_value, .timezone, 
+  .p-message_pane__foreword__description, 
+  .charcoal_grey, 
+  .sidebar_menu_list_item,
+  .channel_purpose_text,
+  .channel_link,
+  .creator_link,
+  .p-channel_insights__highlights_description,
+  .channel_push_notifs,
+  .section_content,
+  .channel_prefs__muting_checkbox_label:not(.subtle_silver),
+  .c-input_select_options_list__option,
+  .channel_prefs_modal_footer__text,
+  .channel_prefs_notifications_table,
+  .channel_prefs_body__section_header_title,
+  .c-input_select,
+  .cmdname,
+  .tab_complete_ui_item,
+  #channel_prefs_dialog,
+  .channel_option_item .title,
+  .channel_options_header,
+  .p-threads_flexpane__header_channel_name,
+  .c-message_kit__message,
+  .c-label__text {
+    color: #ccc !important;
+  }
+
+  div[role=listitem]:first-child {
+    margin-bottom: 20px !important;
+  }
+
+  div[role="presentation"] { background-color: #222 !important; }
+
+  .c-menu_item__li {
+    background-color: #FFF !important;
+  }
+
+  .c-search__input_and_close,
+  .c-search__input_box {
+      background:#292d32!important;
+      color: white !important;
+  }
+
+  .c-search_autocomplete__suggestion_item,
+  .c-search_autocomplete__query_text,
+  .c-search_autocomplete__suggestion_content .c-search_autocomplete__suggestion_text,
+  .c-search_autocomplete footer, .c-search_autocomplete__footer_navigation_help,
+  .p-search_filter__datepicker_trigger:hover {
+      color: #fff !important;
+  }
+
+  .c-search_autocomplete header{
+      background:#b7bcbe!important;
+      color:black !important;
+  }
+
+  .c-search__input_box .c-search__input_box__input .ql-placeholder {
+      border:none !important;
+  }
+
+  .c-search__tabs,
+  .c-search__view {
+      background:#2b2c2e!important;
+  }
+
+  .c-search_message__body{
+      color:#cacbcc !important;
+  }
+  .p-search_filter__title_text{
+      background:#2b2c2e!important;
+      color:white !important;
+  }
+  .p-search_filter__title:before{
+      color:grey !important;
+  }
+  .p-search_filter__dates{
+      background:#1f2021!important;
+      border: none !important;
+      color:#cacbcc !important;
+  }
