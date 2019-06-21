@@ -31,18 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
    let webviews = document.querySelectorAll(".TeamView webview");
 
    // Fetch our CSS in parallel ahead of time
-   const cssPath = 'https://cdn.rawgit.com/widget-/slack-black-theme/master/custom.css';
+   const cssPath = 'https://cdn.rawgit.com/hexcede/slack-dark-theme/master/custom.css';
    let cssPromise = fetch(cssPath).then(response => response.text());
 
-   let customCustomCSS = `
-   :root {
-      /* Modify these to change your theme colors: */
-      --primary: #09F;
-      --text: #CCC;
-      --background: #080808;
-      --background-elevated: #222;
-   }
-   `
+   let customCustomCSS = ``;
 
    // Insert a style tag into the wrapper view
    cssPromise.then(css => {
