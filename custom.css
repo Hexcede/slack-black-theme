@@ -1,3 +1,5 @@
+.p-flexpane_header, .p-threads_footer__input .p-message_input_field, .p-threads_footer__input--legacy .p-message_input_file_button, .p-threads_view, .p-threads_view__default_background { background: #222; }
+
 body { background: #222; color: #e6e6e6; }
 
 a { color: #949494; }
